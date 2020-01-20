@@ -13,5 +13,7 @@ public class Main {
         Yuusya yuusya = new Yuusya();
         yuusya.Yuusya();
         Enemy e = new Enemy("スライム");
+        Action a = new Action(yuusya,e);
+        a.Actions();
     }
 }
