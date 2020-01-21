@@ -1,7 +1,8 @@
 package jp.ac.uryukyu.ie.e195749;
 
 /**
- *ゲームを実行するクラス
+ *ゲームを実行するクラス。
+ * 　
  */
 
 public class Main {
