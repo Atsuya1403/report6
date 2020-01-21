@@ -30,6 +30,7 @@ public class Action {
      */
     void Actions() {
         Attack at = new Attack();
+        Aitem ai = new Aitem();
 
         while (yuusya.yuusya_hp >= 0 && enemy.hp >= 0) {
             try {
@@ -47,8 +48,18 @@ public class Action {
                         System.out.println("勇者" + yuusya.name + "は倒れた！");
                         break;
                     }
-                }
-                else if (num_2 == 0) {
+                } else if (num_2 == 2) {
+                    ai.tuul(yuusya, enemy);
+                    if (enemy.hp <= 0) {
+                        System.out.println(enemy.name + "は倒れた！");
+                        break;
+                    }
+                    at.enemy_attack(yuusya, enemy);
+                    if (yuusya.yuusya_hp <= 0) {
+                        System.out.println("勇者" + yuusya.name + "は倒れた！");
+                        break;
+                    }
+                } else if (num_2 == 0) {
                     break;
                 }
             } catch (InputMismatchException e) {
